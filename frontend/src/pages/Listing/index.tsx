@@ -3,7 +3,7 @@ function Listing() {
   return (
 
 
-    <h1>Pagina de listagem</h1>
+    <h1>Página de listagem</h1>
   );
 
 }
