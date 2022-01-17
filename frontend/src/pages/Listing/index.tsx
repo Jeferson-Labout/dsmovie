@@ -2,7 +2,7 @@ import axios from 'axios'
 import MovieCard from 'components/MovieCard'
 // import MovieScore from 'components/MovieScore'
 // import MovieStars from 'components/MovieStars'
-import Pagination from 'components/Paginaton'
+
 import { useState, useEffect } from 'react'
 import { MoviePage } from 'types/movie'
 import { BASE_URL } from 'utils/request'
@@ -34,7 +34,6 @@ function Listing() {
 
   return (
     <>
-      <Pagination />
       <div className="container">
         <div className="row">
           {page.content.map(movie => (
