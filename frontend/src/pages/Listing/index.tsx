@@ -1,6 +1,6 @@
 import MovieCard from 'components/MovieCard'
-import MovieScore from 'components/MovieScore'
-import MovieStars from 'components/MovieStars'
+// import MovieScore from 'components/MovieScore'
+// import MovieStars from 'components/MovieStars'
 import Pagination from 'components/Paginaton'
 
 function Listing() {
