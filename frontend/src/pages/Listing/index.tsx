@@ -1,9 +1,11 @@
 import axios from 'axios'
 import MovieCard from 'components/MovieCard'
+import Pagination from 'components/Paginaton'
 // import MovieScore from 'components/MovieScore'
 // import MovieStars from 'components/MovieStars'
 
 import { useState, useEffect } from 'react'
+
 import { MoviePage } from 'types/movie'
 import { BASE_URL } from 'utils/request'
 
@@ -28,12 +30,16 @@ function Listing() {
       .then(response => {
         const data = response.data as MoviePage
 
-        setPage(data)
+        setPage(data);
       })
-  }, [pageNumber])
+  }, [pageNumber]);
 
+const handlePageChange = (newPageNumber: number)=>{
+  setPageNumber(newPageNumber);
+}
   return (
     <>
+    <Pagination page={page} onChange={handlePageChange}/>
       <div className="container">
         <div className="row">
           {page.content.map(movie => (
