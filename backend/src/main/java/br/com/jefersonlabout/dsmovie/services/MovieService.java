@@ -29,4 +29,13 @@ public class MovieService {
 		MovieDTO dto = new MovieDTO(result);
 		return dto;
 	}
+	
+	
+	
+	public Movie create(Movie movie){
+		Movie saveMovie = repository.save(movie);
+		
+		return (saveMovie);
+	}
 }
+
