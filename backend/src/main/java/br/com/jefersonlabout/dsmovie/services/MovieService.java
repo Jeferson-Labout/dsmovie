@@ -31,10 +31,11 @@ public class MovieService {
 	}
 	
 	
-	
+	@Transactional
 	public Movie create(Movie movie){
 		Movie saveMovie = repository.save(movie);
-		
+		saveMovie.setCount(0);
+		saveMovie.setScore(0.0);
 		return (saveMovie);
 	}
 }
