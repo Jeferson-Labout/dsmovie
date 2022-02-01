@@ -27,7 +27,7 @@ function Register() {
     axios(config).then((response) => {
 console.log(response.data)
 
-      navigate("/")
+      navigate("/list")
     })
 
   }
@@ -45,7 +45,7 @@ console.log(response.data)
         <div className="dsmovie-form-btn-container">
           <button type="submit" className="btn btn-primary dsmovie-btn">
             Salvar
-          </button>
+          </button>          
         </div>
       </form>
     </div>
